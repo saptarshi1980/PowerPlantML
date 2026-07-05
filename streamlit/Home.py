@@ -1,5 +1,7 @@
-import json
-from pathlib import Path
+"""
+Industrial Power Plant AI
+Home Page
+"""
 
 import streamlit as st
 
@@ -14,174 +16,192 @@ st.set_page_config(
 )
 
 # -------------------------------------------------------
-# Paths
+# Header
 # -------------------------------------------------------
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+st.title("🏭 Industrial Power Plant AI")
 
-MODEL_DIR = PROJECT_ROOT / "models"
-
-METRICS_FILE = MODEL_DIR / "metrics.json"
-MODEL_INFO_FILE = MODEL_DIR / "model_info.json"
-
-# -------------------------------------------------------
-# Load JSON Files
-# -------------------------------------------------------
-
-with open(METRICS_FILE, "r") as f:
-    metrics = json.load(f)
-
-with open(MODEL_INFO_FILE, "r") as f:
-    info = json.load(f)
-
-# -------------------------------------------------------
-# Sidebar
-# -------------------------------------------------------
-
-st.sidebar.title("🏭 Industrial Power Plant AI")
-
-st.sidebar.markdown("---")
-
-st.sidebar.write(f"**Version:** {info['version']}")
-st.sidebar.write(f"**Algorithm:** {info['algorithm']}")
-st.sidebar.write(f"**Platform:** {info['training_platform']}")
-
-st.sidebar.markdown("---")
-
-st.sidebar.success("Backend Loaded Successfully")
-
-# -------------------------------------------------------
-# Title
-# -------------------------------------------------------
-
-st.title("🏭 Industrial Power Plant AI Dashboard")
-
-st.caption(
-    "Predicting Net Power Generation using Machine Learning"
+st.subheader(
+    "AI Decision Support System for Thermal Power Plants"
 )
 
 st.markdown("---")
 
 # -------------------------------------------------------
-# Metrics
+# Introduction
 # -------------------------------------------------------
 
-col1, col2, col3, col4 = st.columns(4)
+st.markdown(
+"""
+Modern thermal power plants generate enormous volumes of operating
+data every minute.
+
+This application uses **Artificial Intelligence** to estimate
+the expected **Net Power Generation (MW)** from current plant
+operating conditions.
+
+Rather than replacing plant engineers, the objective is to
+provide **decision support** by transforming operational data
+into actionable insights.
+"""
+)
+
+st.markdown("---")
+
+# -------------------------------------------------------
+# Key Capabilities
+# -------------------------------------------------------
+
+st.header("🚀 Key Capabilities")
+
+col1, col2 = st.columns(2)
 
 with col1:
-    st.metric(
-        "Model",
-        info["algorithm"]
+
+    st.success(
+"""
+### 🔮 Single Prediction
+
+Predict the expected Net Load (MW)
+for a single operating condition.
+"""
+    )
+
+    st.success(
+"""
+### 📂 Batch Prediction
+
+Upload historical operating data
+and predict Net Load for thousands
+of records.
+"""
     )
 
 with col2:
-    st.metric(
-        "R² Score",
-        f"{metrics['R2']:.3f}"
+
+    st.success(
+"""
+### 🧠 AI Insights
+
+Understand which operating
+parameters have the greatest
+influence on plant generation.
+"""
     )
 
-with col3:
-    st.metric(
-        "RMSE",
-        f"{metrics['RMSE']:.3f}"
-    )
+    st.success(
+"""
+### 📈 Plant Analytics
 
-with col4:
-    st.metric(
-        "MAE",
-        f"{metrics['MAE']:.3f}"
+Explore historical operating
+patterns and relationships
+between important plant variables.
+"""
     )
 
 st.markdown("---")
 
 # -------------------------------------------------------
-# Project Information
+# Workflow
 # -------------------------------------------------------
 
-left, right = st.columns([2, 1])
+st.header("⚙ AI Decision Support Workflow")
+
+st.info("""
+Plant Operating Data
+
+⬇
+
+AI Prediction Engine
+
+⬇
+
+Predicted Net Load
+
+⬇
+
+AI Insights
+
+⬇
+
+Better Operational Decisions
+""")
+
+st.markdown("---")
+
+# -------------------------------------------------------
+# Business Value
+# -------------------------------------------------------
+
+st.header("💡 Business Value")
+
+left, right = st.columns(2)
 
 with left:
 
-    st.subheader("📘 Project Overview")
-
-    st.write(
-        """
-This application predicts the **Net Load (MW)** of an industrial
-thermal power plant using an **Optimized XGBoost** regression model.
-
-The model was trained using historical operational data collected
-from boiler, turbine and auxiliary plant sensors.
-"""
-    )
-
-    st.write("### Features")
-
     st.markdown("""
-- ✅ Optimized XGBoost Model
-- ✅ Optuna Hyperparameter Tuning
-- ✅ SHAP Explainability
-- ✅ Batch Prediction
-- ✅ Single Prediction
-- ✅ CSV Upload Support
+### Benefits to Plant Engineers
+
+- Estimate expected generation.
+
+- Evaluate operating scenarios.
+
+- Understand important plant parameters.
+
+- Analyse historical operating data.
+
+- Support operational decision making.
 """)
 
 with right:
 
-    st.subheader("ℹ Model Details")
+    st.markdown("""
+### Benefits to Management
 
-    st.info(f"""
-**Algorithm**
+- Encourage data-driven decisions.
 
-{info['algorithm']}
+- Improve operational awareness.
 
----
+- Demonstrate AI adoption.
 
-**Target**
+- Reduce manual analysis effort.
 
-{info['target']}
-
----
-
-**Optimization**
-
-{info['optimization']}
-
----
-
-**Explainability**
-
-{info['explainability']}
-
----
-
-**Version**
-
-{info['version']}
+- Support digital transformation.
 """)
 
 st.markdown("---")
 
 # -------------------------------------------------------
-# Model Performance
+# Future Vision
 # -------------------------------------------------------
 
-st.subheader("📊 Model Performance")
+st.header("🚀 Future Roadmap")
 
-perf1, perf2, perf3, perf4 = st.columns(4)
+st.write("""
+The current version demonstrates AI-based
+prediction of Net Load.
 
-perf1.metric("R²", f"{metrics['R2']:.4f}")
-perf2.metric("RMSE", f"{metrics['RMSE']:.4f}")
-perf3.metric("MAE", f"{metrics['MAE']:.4f}")
-perf4.metric("MAPE", f"{metrics['MAPE']:.2%}")
+Future versions may include:
+
+- Real-time SCADA integration
+
+- Equipment health monitoring
+
+- Boiler efficiency optimisation
+
+- Turbine performance monitoring
+
+- Early fault detection
+
+- AI-powered operational recommendations
+""")
 
 st.markdown("---")
 
-# -------------------------------------------------------
-# Footer
-# -------------------------------------------------------
-
-st.success("✅ Model and configuration loaded successfully.")
+st.success(
+"Industrial Power Plant AI is designed as an AI-assisted decision support platform—not an autonomous control system."
+)
 
 st.caption(
-    "Industrial Power Plant AI | Developed using Python, XGBoost, Optuna, SHAP and Streamlit"
+"Developed using Python • XGBoost • Optuna • SHAP • Streamlit"
 )

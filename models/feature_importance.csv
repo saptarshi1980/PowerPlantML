@@ -1,0 +1,86 @@
+Feature,Importance
+Nett Load (MW)_lag_1,0.46737298
+rolling_max_3,0.08691227
+rolling_min_3,0.065729804
+Nett Load (MW)_lag_2,0.05792161
+rolling_mean_3,0.036590472
+rolling_std_3,0.015937068
+Nett Load (MW)_lag_3,0.014164775
+rolling_max_6,0.006016095
+rolling_mean_6,0.004562058
+rolling_std_6,0.0045159347
+WeekOfYear,0.004339487
+rolling_min_6,0.004325733
+DayOfWeek,0.004043992
+CO2 (ppm),0.0039874273
+rolling_max_12,0.003852486
+rolling_min_12,0.0038263546
+Entalphy inlet MS (kj/kg),0.0037787245
+Opacity (%),0.003743583
+Condenser vacuum (kPa),0.0037398029
+HHV (Kcal/Kg),0.0037278086
+DayOfYear,0.0037120052
+Reheat steam temperature (turbine side) (℃),0.003693646
+Nox (mg/m3),0.0036764245
+Nett Load (MW)_lag_6,0.0036670053
+O2 in APH (%),0.0036517612
+O2 Out APH (%),0.0036511996
+HP Turbine eff (%),0.0036403257
+Flue gas temperature (℃),0.0035837425
+Month,0.003582494
+Boiler Eff (%),0.003571858
+Day,0.0035449525
+rolling_mean_12,0.0035332819
+Reheater desuperheating water flow (t/h),0.0035101657
+Reheat steam pressure (turbine side) (MPa),0.0034903344
+Entalphy Cold Reheat (kj/kg),0.0034772712
+Dust (mg/m3),0.003426635
+Pressure (Kpa),0.0034247555
+Main steam pressure (turbine side) (MPa),0.0034235057
+Month_sin,0.0033866346
+Corrected Flue Gas Out Temperature (°C),0.0033767174
+Hour_sin,0.0033689055
+Main steam temperature (turbine side) (℃),0.0033657223
+Main steam flow (t/h),0.0033497044
+APH Effectiveness (%),0.0033496262
+CO (mg/m3),0.0033353027
+Superheater desuperheating water flow (t/h),0.003327263
+Cold Reheat Pressure (Mpa),0.0033023232
+Flow rate (KNm3/h),0.0032828143
+rolling_std_12,0.0032660551
+O2 (%),0.0032642349
+Nett Load (MW)_lag_12,0.0032452627
+APH Leakage (%),0.0032232802
+Temp. (°C),0.0032218336
+Coal Flow (t/h),0.0032213451
+NTHR (Kcal/Kwh),0.0032131728
+Velocity (m/s),0.0032116175
+Feedwater pressure (MPa),0.0032105388
+Entropi Inlet MS (Kj/Kg (Deg C)),0.0031830145
+ΔP aktual (Kj/Kg),0.003180704
+Hour_cos,0.003149488
+High exhaust pressure (Mpa),0.0031394158
+Feedwater temperature (℃),0.0031297337
+ΔHP isentropis (Kj/Kg),0.0031199285
+Energy Input From Boiler (Kcal/h),0.003110296
+Feedwater flow (t/h),0.0031036837
+Control stage pressure (Mpa),0.0030958978
+Refference Temperature (°C),0.0030781105
+Cold Reheat Temperature (°C),0.0030652706
+Entalphy Isentropis Cold Reheat (kj/kg),0.0030602773
+Boiler oxygen level (%),0.002995419
+Flue Gas in Temperature (°C),0.002974724
+NPHR (Kcal/Kwh),0.0029664752
+Main steam pressure (boiler side) (Mpa),0.002942919
+Hour,0.0028723944
+Main steam temperature (boiler side) (℃),0.00283731
+Circulating water outlet temperature (℃),0.0028343736
+Minute,0.002811497
+SO2 (mg/m3),0.002761912
+DayOfWeek_sin,0.0027572955
+DayOfWeek_cos,0.0027461061
+Reheat steam temperature (boiler side) (℃),0.0026133314
+Month_cos,0.0025982966
+Weekend,0.0
+Quarter,0.0
+Year,0.0
