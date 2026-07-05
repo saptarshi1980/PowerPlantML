@@ -1,0 +1,9 @@
+{
+    "model_name": "Optimized XGBoost",
+    "version": "1.0",
+    "target": "Nett Load (MW)",
+    "mae": 0.42263286730638727,
+    "rmse": 0.529851327762721,
+    "mape": 0.15090157400234153,
+    "r2": 0.8037183392577907
+}
