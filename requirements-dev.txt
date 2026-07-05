@@ -1,0 +1,8 @@
+-r requirements.txt
+
+optuna
+lightgbm
+catboost
+jupyter
+ipykernel
+tqdm
